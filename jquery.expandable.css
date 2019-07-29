@@ -57,22 +57,18 @@
 .expandable .expand-bar i::before, .expandable .expand-bar i::after {
     position: absolute;
     width: 10px;
-    height: 2px;
-    background: black;
+    height: 1px;
+    background: #1d1d1d;
     content: "";
     left: 5px;
 }
 
 .expandable .expand-bar i::before {
     transform: rotate(45deg);
-    top: 12px;
+    top: 13px;
 }
 
 .expandable .expand-bar i::after {
     transform: rotate(-45deg);
     top: 6px;
-}
-
-.to-expand {
-    padding-bottom: 20px;
 }

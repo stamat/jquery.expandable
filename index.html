@@ -8,8 +8,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <link rel="stylesheet" href="jquery.expandable.css">
-        <style>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 
+        <style>
+            html, body {
+                font-family: 'Lato', sans-serif;
+                color: #1d1d1d;
+            }
+
+            .expandable .expand-bar {
+                font-size: 9px;
+            }
+
+            .to-expand {
+                padding-bottom: 20px;
+            }
         </style>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -19,14 +32,14 @@
         <div class="container">
             <main>
                 <section class="testing" style="width: 300px; padding-bottom: 100px;">
-                    <div class="description">
+                    <div class="description to-expand">
                         <h1>Distillate</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus ligula vestibulum venenatis efficitur. Phasellus posuere urna et faucibus vestibulum. Duis quis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus ligula vestibulum venenatis efficitur. Phasellus posuere urna et faucibus vestibulum. Duis quis eros.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus ligula vestibulum venenatis efficitur. Phasellus posuere urna et faucibus vestibulum. Duis quis eros.</p>
                     </div>
                 </section>
-                <section class="testing" style="width: 300px; padding-bottom: 100px;">
-                    <div class="description">
+                <section class="testing" style="padding-bottom: 100px;">
+                    <div class="description2 to-expand">
                         <h1>Distillate</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus ligula vestibulum venenatis efficitur. Phasellus posuere urna et faucibus vestibulum. Duis quis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus ligula vestibulum venenatis efficitur. Phasellus posuere urna et faucibus vestibulum. Duis quis eros.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus ligula vestibulum venenatis efficitur. Phasellus posuere urna et faucibus vestibulum. Duis quis eros.</p>
@@ -36,7 +49,15 @@
         </div>
         <script type="text/javascript">
             jQuery(document).ready(function() {
-                $('.description').expandable();
+                $('.description').expandable({
+                    height: 210
+                });
+                $('.description2').expandable({
+                    height: 210,
+                    expand_responsive : 960,
+                    no_less: true,
+                    offset: 30
+                });
             });
         </script>
     </body>

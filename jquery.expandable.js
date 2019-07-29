@@ -46,7 +46,6 @@
 				$more.show();
 				$root.removeClass('expanded');
 			} else {
-				console.log($wrap.outerHeight(true));
 				$root.css({
 					'height': $wrap.outerHeight(true)
 				});
@@ -58,16 +57,18 @@
 				}, params.animation_duration);
 
 				$root.addClass('expanded');
+
+                if (params.no_less) {
+                    $(this).hide();
+                    $(this).unbind('click');
+                    $wrap.unbind('expandable_resize')
+                }
 			}
 		});
 
 		function checkHeight($elem) {
 			var oh = $elem.outerHeight(true);
 			var $root = $elem.parent();
-
-			if ($root.hasClass('expanded')) {
-				return;
-			}
 
 			var $expand_bar = $root.find('.expand-bar');
 
@@ -89,7 +90,9 @@
 				$root.css('height', 'auto');
 				$expand_bar.hide();
 			} else {
-				$root.css('height', params.height);
+                if (!$root.hasClass('expanded')) {
+                    $root.css('height', params.height);
+                }
 				$expand_bar.show();
 			}
 		}
