@@ -8,6 +8,8 @@ Add some styles to it and ta f**king da!
 
 Never again will you have to write this trivial code. (For the duration of my career, till now, about 12 years, I've been writing this code every time from point zero... Retarded? My mom always said I was special...)
 
+[DEMO HERE ⤻](http://stamat.github.io/jquery.expandable)
+
 ## Options
 
 * **height** (int) [default: 200]               - set the height of the expandable element, if targeted content height is larger everything below this value will be hidden and "show more" button will appear. This code hooks onto window resize event so it will be responsively calculated.
