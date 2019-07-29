@@ -8,7 +8,7 @@
 
 		var defaults = {
 			'height': 200,
-			'more': 'Expand for more',
+			'more': 'Show more',
 			'less': 'Show less',
 			'no_less': false,
 			'offset': 0,
