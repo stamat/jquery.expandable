@@ -14,7 +14,7 @@
 			'offset': 0,
 			'animation_duration': 250,
 			'expand_responsive': 0
-		}
+		};
 
 		for (var k in defaults) {
 			if (!params.hasOwnProperty(k)) {
